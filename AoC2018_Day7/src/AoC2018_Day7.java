@@ -5,10 +5,9 @@ import java.util.Arrays;
 public class AoC2018_Day7 {
     public static String[][] steps;
     public static int stepcount;
-    public static String solval;
 
     public static void main(String[] args) throws Exception {
-
+        String solval;
         steps = new String[101][2];
         stepcount = 0;
         String thisLine;
@@ -50,7 +49,7 @@ public class AoC2018_Day7 {
             check = ready.substring(0,1);
             solval += check;
             ready = ready.substring(1);
-            System.out.println(solval +" & ready " + ready );
+            System.out.println("Solution so far " + solval +" & checking "+ check + " ready to handle: " + ready );
 
             downstr = getdown(check);
             for(int ql = 0; ql < downstr.length(); ql ++){
